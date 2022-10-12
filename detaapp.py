@@ -1,5 +1,6 @@
 import streamlit as st
 from deta import Deta
+import pandas as pd
 
 # Data to be written to Deta Base
 with st.form("form"):
@@ -26,10 +27,10 @@ if submitted:
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
 db_content = db.fetch()
-dbs = db_content.items
-per = [item['key'] for item in items]
+#dbs = db_content.items
+#per = [item['key'] for item in items]
 st.write(per)
-#df = pd.DataFrame(db_content)
-#st.dataframe(df) 
+df = pd.DataFrame(db_content)
+st.dataframe(df) 
 st.write(db_content)
 st.write(db_content.items)
