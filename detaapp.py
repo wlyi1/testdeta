@@ -29,7 +29,7 @@ if submitted:
 db_content = db.fetch()
 #dbs = db_content.items
 #per = [item['key'] for item in items]
-st.write(per)
+#st.write(per)
 df = pd.DataFrame(db_content)
 st.dataframe(df) 
 st.write(db_content)
