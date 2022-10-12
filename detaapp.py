@@ -27,10 +27,11 @@ if submitted:
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
 db_content = db.fetch()
+st.write(db_content)
 #dbs = db_content.items
 #per = [item['key'] for item in items]
 #st.write(per)
 df = pd.DataFrame(db_content)
 st.dataframe(df) 
-st.write(db_content)
+
 st.write(db_content.items)
