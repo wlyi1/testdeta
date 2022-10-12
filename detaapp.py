@@ -14,13 +14,13 @@ deta = Deta(st.secrets["project_key"])
 
 # Create a new database "example-db"
 # If you need a new database, just use another name.
-db = deta.Base("random1")
+db = deta.Base("random2")
 
 # If the user clicked the submit button,
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
-    db.put({"name": name, "age": age})
+    db.put({"names": name, "ages": age})
 
 "---"
 "Here's everything stored in the database:"
